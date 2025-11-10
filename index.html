@@ -31,7 +31,7 @@
         .stat-item { text-align: center; }
         .stat-number { font-size: 3.5em; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 10px; }
         .stat-label { color: #666; font-size: 0.95em; font-weight: 500; }
-        .section { padding: 120px 60px 80px; max-width: 1400px; margin: 0 auto; min-height: 100vh; }
+        .section { padding: 120px 60px 80px; max-width: 1400px; margin: 0 auto; }
         .section-header { display: flex; align-items: center; gap: 15px; margin-bottom: 60px; }
         .section-icon { width: 50px; height: 50px; background: #1a1a1a; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; }
         .section-title { font-size: 2.5em; font-weight: 700; color: #fff; }
@@ -113,16 +113,17 @@
             <a onclick="showPage('projects')" data-page="projects">Projects</a>
             <a onclick="showPage('education')" data-page="education">Education</a>
             <a onclick="showPage('skills')" data-page="skills">Skills</a>
-            <a onclick="showPage('certifications')" data-page="certifications">Certifications</a>
             <a onclick="showPage('research')" data-page="research">Research</a>
+            <a onclick="showPage('certifications')" data-page="certifications">Certifications</a>
             <a onclick="showPage('contact')" data-page="contact">Contact</a>
             <a href="Mrunal_Jadhav_CV.pdf" class="download-btn" download>Download Resume</a>
         </div>
     </nav>
 
-    <!-- About Page -->
-    <div class="page active" id="about-page">
-        <section class="hero">
+    <!-- Home Page (About, Experience, Education, Skills, Certifications) -->
+    <div class="page active" id="home-page">
+        <!-- About Section -->
+        <section class="hero" id="about">
             <div class="hero-content">
                 <div class="greeting"><span class="wave-emoji">👋</span>Hello, How have you been?</div>
                 <h1>I'm Mrunal Jadhav,</h1>
@@ -141,15 +142,9 @@
                 <img src="ProfileImage.jpg" alt="Mrunal Jadhav" class="hero-image" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>👤</div>'">
             </div>
         </section>
-        <footer class="footer">
-            <p>&copy; 2025 Mrunal Vinay Jadhav. All rights reserved.</p>
-            <p style="margin-top: 10px;">Baltimore, Maryland</p>
-        </footer>
-    </div>
 
-    <!-- Experience Page -->
-    <div class="page" id="experience-page">
-        <section class="section">
+        <!-- Experience Section -->
+        <section class="section" id="experience">
             <div class="section-header"><div class="section-icon">💼</div><h2 class="section-title">Professional Journey</h2></div>
             <div class="experience-grid">
                 <div class="experience-card">
@@ -209,50 +204,9 @@
                 </div>
             </div>
         </section>
-        <footer class="footer">
-            <p>&copy; 2025 Mrunal Vinay Jadhav. All rights reserved.</p>
-        </footer>
-    </div>
 
-    <!-- Projects Page -->
-    <div class="page" id="projects-page">
-        <section class="section">
-            <div class="section-header"><div class="section-icon">🚀</div><h2 class="section-title">Projects</h2></div>
-            <div class="projects-grid">
-                <a href="https://github.com/MrunalJadhav2025/Cyber-Security-Threat-Detection-Using-Big-Data.git" target="_blank" class="project-card">
-                    <div class="project-image">🔒</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Cyber Security Threat Detection</h3>
-                        <div class="project-tech">Python • PySpark • XGBoost • Apache Spark</div>
-                        <p class="project-description">Constructed scalable threat detection system achieving 86.8% accuracy in classifying IoT attacks using big data processing and machine learning techniques.</p>
-                    </div>
-                </a>
-                <a href="https://github.com/MrunalJadhav2025/Employee-Departure-Prediction-Using-Semi-Supervised-Learning.git" target="_blank" class="project-card">
-                    <div class="project-image">📊</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Employee Departure Prediction</h3>
-                        <div class="project-tech">Python • KMeans • PCA • Logistic Regression</div>
-                        <p class="project-description">Formulated semi-supervised learning approach growing label coverage by 70% and achieving 80% predictive accuracy in low-label conditions.</p>
-                    </div>
-                </a>
-                <a href="https://github.com/MrunalJadhav2025/Credit-Card-Fraud-Detection.git" target="_blank" class="project-card">
-                    <div class="project-image">💳</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Credit Card Fraud Detection</h3>
-                        <div class="project-tech">Python • Machine Learning • Isolation Forest</div>
-                        <p class="project-description">Designed fraud detection system utilizing advanced ML techniques achieving 99% classification accuracy with minimal false positives.</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-        <footer class="footer">
-            <p>&copy; 2025 Mrunal Vinay Jadhav. All rights reserved.</p>
-        </footer>
-    </div>
-
-    <!-- Education Page -->
-    <div class="page" id="education-page">
-        <section class="section">
+        <!-- Education Section -->
+        <section class="section" id="education">
             <div class="section-header"><div class="section-icon">🎓</div><h2 class="section-title">Education</h2></div>
             <div class="education-grid">
                 <div class="education-card">
@@ -269,14 +223,9 @@
                 </div>
             </div>
         </section>
-        <footer class="footer">
-            <p>&copy; 2025 Mrunal Vinay Jadhav. All rights reserved.</p>
-        </footer>
-    </div>
 
-    <!-- Skills Page -->
-    <div class="page" id="skills-page">
-        <section class="section">
+        <!-- Skills Section -->
+        <section class="section" id="skills">
             <div class="section-header"><div class="section-icon">⚡</div><h2 class="section-title">Skills & Expertise</h2></div>
             <div class="skills-categories">
                 <div class="skill-category-card">
@@ -320,15 +269,68 @@
                 </div>
             </div>
         </section>
+
+        <!-- Certifications Section -->
+        <section class="section" id="certifications">
+            <div class="section-header"><div class="section-icon">🏆</div><h2 class="section-title">Certifications</h2></div>
+            <div class="certifications-grid">
+                <div class="certification-card"><div class="cert-icon">🤖</div><div class="cert-info"><div class="cert-name">Automation Engineer - AI and Data Analytics</div><div class="cert-issuer">Professional Certification</div></div></div>
+                <div class="certification-card"><div class="cert-icon">☕</div><div class="cert-info"><div class="cert-name">Java Programming</div><div class="cert-issuer">Professional Certification</div></div></div>
+                <div class="certification-card"><div class="cert-icon">💾</div><div class="cert-info"><div class="cert-name">MySQL</div><div class="cert-issuer">Professional Certification</div></div></div>
+                <div class="certification-card"><div class="cert-icon">🐍</div><div class="cert-info"><div class="cert-name">Python Programming</div><div class="cert-issuer">Professional Certification</div></div></div>
+                <div class="certification-card"><div class="cert-icon">🧪</div><div class="cert-info"><div class="cert-name">Software Testing</div><div class="cert-issuer">Professional Certification</div></div></div>
+                <div class="certification-card"><div class="cert-icon">🔄</div><div class="cert-info"><div class="cert-name">Agile Methodology</div><div class="cert-issuer">Professional Certification</div></div></div>
+                <div class="certification-card"><div class="cert-icon">📱</div><div class="cert-info"><div class="cert-name">Fundamentals of Digital Marketing</div><div class="cert-issuer">Google</div></div></div>
+                <div class="certification-card"><div class="cert-icon">🏦</div><div class="cert-info"><div class="cert-name">Banking Foundation</div><div class="cert-issuer">Professional Certification</div></div></div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 Mrunal Vinay Jadhav. All rights reserved.</p>
+            <p style="margin-top: 10px;">Baltimore, Maryland</p>
+        </footer>
+    </div>
+
+    <!-- Projects Page -->
+    <div class="page" id="projects-page">
+        <section class="section">
+            <div class="section-header"><div class="section-icon">🚀</div><h2 class="section-title">Projects</h2></div>
+            <div class="projects-grid">
+                <a href="https://github.com/MrunalJadhav2025/Cyber-Security-Threat-Detection-Using-Big-Data.git" target="_blank" class="project-card">
+                    <div class="project-image">🔒</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Cyber Security Threat Detection</h3>
+                        <div class="project-tech">Python • PySpark • XGBoost • Apache Spark</div>
+                        <p class="project-description">Constructed scalable threat detection system achieving 86.8% accuracy in classifying IoT attacks using big data processing and machine learning techniques.</p>
+                    </div>
+                </a>
+                <a href="https://github.com/MrunalJadhav2025/Employee-Departure-Prediction-Using-Semi-Supervised-Learning.git" target="_blank" class="project-card">
+                    <div class="project-image">📊</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Employee Departure Prediction</h3>
+                        <div class="project-tech">Python • KMeans • PCA • Logistic Regression</div>
+                        <p class="project-description">Formulated semi-supervised learning approach growing label coverage by 70% and achieving 80% predictive accuracy in low-label conditions.</p>
+                    </div>
+                </a>
+                <a href="https://github.com/MrunalJadhav2025/Credit-Card-Fraud-Detection.git" target="_blank" class="project-card">
+                    <div class="project-image">💳</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Credit Card Fraud Detection</h3>
+                        <div class="project-tech">Python • Machine Learning • Isolation Forest</div>
+                        <p class="project-description">Designed fraud detection system utilizing advanced ML techniques achieving 99% classification accuracy with minimal false positives.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
         <footer class="footer">
             <p>&copy; 2025 Mrunal Vinay Jadhav. All rights reserved.</p>
         </footer>
     </div>
 
-    <!-- Research Page -->
-    <div class="page" id="research-page">
+    <!-- My Writings Page -->
+    <div class="page" id="writings-page">
         <section class="section">
-            <div class="section-header"><div class="section-icon">📚</div><h2 class="section-title">Research & Publications</h2></div>
+            <div class="section-header"><div class="section-icon">📚</div><h2 class="section-title">My Writings</h2></div>
             <div class="research-grid">
                 <div class="research-card">
                     <div class="research-header">
@@ -357,30 +359,10 @@
         </footer>
     </div>
 
-    <!-- Certifications Page -->
-    <div class="page" id="certifications-page">
-        <section class="section">
-            <div class="section-header"><div class="section-icon">🏆</div><h2 class="section-title">Certifications</h2></div>
-            <div class="certifications-grid">
-                <div class="certification-card"><div class="cert-icon">🤖</div><div class="cert-info"><div class="cert-name">Automation Engineer - AI and Data Analytics</div><div class="cert-issuer">Professional Certification</div></div></div>
-                <div class="certification-card"><div class="cert-icon">☕</div><div class="cert-info"><div class="cert-name">Java Programming</div><div class="cert-issuer">Professional Certification</div></div></div>
-                <div class="certification-card"><div class="cert-icon">💾</div><div class="cert-info"><div class="cert-name">MySQL</div><div class="cert-issuer">Professional Certification</div></div></div>
-                <div class="certification-card"><div class="cert-icon">🐍</div><div class="cert-info"><div class="cert-name">Python Programming</div><div class="cert-issuer">Professional Certification</div></div></div>
-                <div class="certification-card"><div class="cert-icon">🧪</div><div class="cert-info"><div class="cert-name">Software Testing</div><div class="cert-issuer">Professional Certification</div></div></div>
-                <div class="certification-card"><div class="cert-icon">🔄</div><div class="cert-info"><div class="cert-name">Agile Methodology</div><div class="cert-issuer">Professional Certification</div></div></div>
-                <div class="certification-card"><div class="cert-icon">📱</div><div class="cert-info"><div class="cert-name">Fundamentals of Digital Marketing</div><div class="cert-issuer">Google</div></div></div>
-                <div class="certification-card"><div class="cert-icon">🏦</div><div class="cert-info"><div class="cert-name">Banking Foundation</div><div class="cert-issuer">Professional Certification</div></div></div>
-            </div>
-        </section>
-        <footer class="footer">
-            <p>&copy; 2025 Mrunal Vinay Jadhav. All rights reserved.</p>
-        </footer>
-    </div>
-
     <!-- Contact Page -->
     <div class="page" id="contact-page">
         <section class="contact-section">
-            <div class="section-header" style="justify-content: center;"><div class="section-icon"></div><h2 class="section-title">Contact</h2></div>
+            <div class="section-header" style="justify-content: center;"><div class="section-icon">📧</div><h2 class="section-title">Contact</h2></div>
             <h2>Let's Get in Touch!</h2>
             <p class="contact-description">I'm always open to discussing new opportunities, collaborations, or just connecting. Feel free to reach out!</p>
             <div class="contact-buttons">
